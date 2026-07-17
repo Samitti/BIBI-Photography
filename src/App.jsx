@@ -84,6 +84,21 @@ const pricing = [
   },
 ]
 
+const styleChoices = [
+  {
+    title: 'Natural',
+    details: 'Soft light, relaxed posing, true-to-life color.',
+  },
+  {
+    title: 'Editorial',
+    details: 'Clean, polished, fashion-inspired framing.',
+  },
+  {
+    title: 'Romantic',
+    details: 'Warm tones, intimate moments, gentle mood.',
+  },
+]
+
 const MIN_MESSAGE_LENGTH = 20
 
 function validateField(name, value) {
@@ -381,15 +396,26 @@ function App() {
             <div className="interactive-card rounded-[2.5rem] border border-white/40 bg-gradient-to-br from-[#f4e7d4] to-[#d4b395] p-5 shadow-glow">
               <div className="rounded-[2rem] bg-[#2f1f16] p-6 text-[#f2ddc8]">
                 <p className="text-xs uppercase tracking-[0.26em] text-[#c8a98f]">
-                  Signature Style
+                  Choice-Driven, Customizable Style Options
                 </p>
                 <p className="heading-font mt-5 text-3xl leading-tight">
-                  Editorial framing, warm tones, and natural human moments.
+                  Your style, your choice: fully customizable framing, color tones,
+                  and aesthetic preferences designed around you.
                 </p>
-                <div className="mt-8 grid grid-cols-3 gap-3">
-                  <div className="h-20 rounded-2xl bg-[#8c5f45]" />
-                  <div className="h-20 rounded-2xl bg-[#b17a56]" />
-                  <div className="h-20 rounded-2xl bg-[#d5a475]" />
+                <div className="mt-8 grid gap-3">
+                  {styleChoices.map((choice) => (
+                    <div
+                      key={choice.title}
+                      className="rounded-2xl border border-[#a77f66]/35 bg-[#41281d]/85 p-4 transition hover:border-[#d5b08f]/70 hover:bg-[#4a2e21]"
+                    >
+                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f7dbc2]">
+                        {choice.title}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-[#d9b89d]">
+                        {choice.details}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
