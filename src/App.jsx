@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const portfolioItems = [
   {
@@ -264,7 +265,7 @@ function App() {
     })
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/hello@bibiphotography.ca', {
+      const response = await fetch('https://formsubmit.co/ajax/emma7bibi@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -310,7 +311,7 @@ function App() {
       setFormStatus({
         state: 'error',
         message:
-          'Message could not be sent right now. Please try again or email hello@bibiphotography.ca.',
+          'Message could not be sent right now. Please try again or email emma7bibi@gmail.com.',
       })
     }
   }
@@ -324,7 +325,7 @@ function App() {
               BiBi Photography
             </p>
             <p className="text-xs uppercase tracking-[0.32em] text-[#7f6657]">
-              Kitchener-Waterloo
+              Live Your Imagination
             </p>
           </div>
           <ul className="hidden items-center gap-6 text-sm font-semibold uppercase tracking-[0.16em] text-[#5f4638] md:flex">
@@ -347,6 +348,11 @@ function App() {
               <a href="#galleries" className="transition hover:text-[#a3653e]">
                 Galleries
               </a>
+            </li>
+            <li>
+              <Link to="/gallery" className="transition hover:text-[#a3653e]">
+                Gallery
+              </Link>
             </li>
             <li>
               <a href="#testimonials" className="transition hover:text-[#a3653e]">
@@ -538,16 +544,16 @@ function App() {
                 </p>
                 <div className="mt-8 grid grid-cols-1 gap-4 text-sm uppercase tracking-[0.2em]">
                   <a
-                    href="mailto:hello@bibiphotography.ca"
+                    href="mailto:emma7bibi@gmail.com"
                     className="rounded-2xl border border-[#c99e7c]/40 bg-[#422a1d] px-5 py-4 transition hover:bg-[#523527]"
                   >
-                    hello@bibiphotography.ca
+                    emma7bibi@gmail.com
                   </a>
                   <a
                     href="tel:+12265550126"
                     className="rounded-2xl border border-[#c99e7c]/40 bg-[#422a1d] px-5 py-4 transition hover:bg-[#523527]"
                   >
-                    +1 (226) 555-0126
+                    +1 (519) 573-9439
                   </a>
                 </div>
               </div>
@@ -708,8 +714,9 @@ function App() {
                 BiBi Photography
               </p>
               <p className="mt-2 text-sm uppercase tracking-[0.24em] text-[#d6b79b]">
-                Ema BiBi · Kitchener-Waterloo
+                Live Your Imagination
               </p>
+
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#e7ccb3]">
                 Artistic photography for weddings, portraits, and stories that feel
                 timeless.
@@ -730,6 +737,11 @@ function App() {
                   </a>
                 </li>
                 <li>
+                  <Link to="/gallery" className="footer-link">
+                    Gallery
+                  </Link>
+                </li>
+                <li>
                   <a href="#contact" className="footer-link">
                     Contact
                   </a>
@@ -741,7 +753,7 @@ function App() {
               <p className="text-xs uppercase tracking-[0.26em] text-[#d6b79b]">Social</p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <a
-                  href="https://facebook.com"
+                  href="https://facebook.com/bibiphotography"
                   target="_blank"
                   rel="noreferrer"
                   className="social-pill"
@@ -753,7 +765,7 @@ function App() {
                   Facebook
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/bibiphotography"
                   target="_blank"
                   rel="noreferrer"
                   className="social-pill"
