@@ -69,18 +69,18 @@ const testimonials = [
 const pricing = [
   {
     plan: 'Essential Session',
-    value: '$340',
-    includes: '45 minutes, 1 location, 25 edited images',
+    value: '$200',
+    includes: '1 hour, 1 location, 25 edited images in digital format',
   },
   {
     plan: 'Signature Story',
-    value: '$590',
-    includes: '90 minutes, up to 2 locations, 60 edited images',
+    value: '$450',
+    includes: '2 hours, up to 2 locations, 60 edited images in print and digital format',
   },
   {
     plan: 'Wedding Collection',
-    value: '$1,950',
-    includes: '8 hours coverage, timeline support, online gallery',
+    value: '$5,880',
+    includes: 'Full wedding coverage, upto 300 printed in photobook format, all high-resolution images in digital format',
   },
 ]
 
